@@ -1,0 +1,1 @@
+[{"title":"Laptop","price":"300.000","id":1}][{"title":"Monitor","price":"200.000","id":2}][{"title":"Mouse","price":"50.000","id":3}]
