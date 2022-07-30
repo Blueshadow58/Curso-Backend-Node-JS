@@ -27,6 +27,19 @@ const product3 = {
   //   thumbnail: "https://dojiw2m9tvv09.cloudfront.net/48881/product/cor7139.jpg",
 };
 
+//Ingreso de campos
 contenedor1.save(product1);
 contenedor2.save(product2);
 contenedor3.save(product3);
+
+//Seleccion de objeto por Id
+Contenedor.getById(3);
+
+//Seleccionar todos los bojectos
+Contenedor.getAll();
+
+//Eliminar un objecto del archivo
+Contenedor.deleteById(2);
+
+//Eliminar todos los datos del archivo
+Contenedor.deleteAll();
