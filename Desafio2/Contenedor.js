@@ -59,7 +59,7 @@ class Contenedor {
       const fs = require("fs");
       const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-      await delay(1000);
+      await delay(1500);
 
       this.productos.map(function (producto) {
         if (producto.id === idProduct) {
@@ -79,7 +79,7 @@ class Contenedor {
 
   static getAll = async () => {
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-    await delay(1500);
+    await delay(2000);
     const fs = require("fs");
 
     fs.promises
@@ -93,7 +93,7 @@ class Contenedor {
 
   static deleteById = async (idProduct) => {
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-    await delay(1500);
+    await delay(2500);
     const fs = require("fs");
 
     fs.promises
@@ -122,7 +122,7 @@ class Contenedor {
     const fs = require("fs");
 
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-    await delay(1800);
+    await delay(3000);
 
     fs.promises
       .writeFile("./productos.txt", "")
