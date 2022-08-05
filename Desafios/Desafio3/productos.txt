@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Laptop",
+        "price": "800.000",
+        "thumbnail":
+        "https://www.clickyarregla.com/wp/wp-content/uploads/2016/03/laptop-png-6759.png",
+        "id":1
+    },
+    {
+        "title": "Celular",
+        "price": "500.000",
+        "thumbnail":
+        "https://falabella.scene7.com/is/image/FalabellaCO/13148184_1?wid=800&hei=800&qlt=70",
+        "id":2
+    },
+    {
+        "title": "Ipad",
+        "price": "400.000",
+        "thumbnail":
+        "https://http2.mlstatic.com/D_NQ_NP_798812-MLA46432737352_062021-O.jpg",
+        "id":3
+    }
+]
