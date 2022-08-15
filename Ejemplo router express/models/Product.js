@@ -35,7 +35,7 @@ class Product {
     Product.productos[id - 1].price = price;
     Product.productos[id - 1].thumbnail = thumbnail;
 
-    return "Producto actualizado";
+    return this.getAll();
   };
 
   static deleteById = (id) => {
