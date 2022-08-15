@@ -1,13 +1,15 @@
 const express = require("express");
 const multer = require("multer");
-const app = express();
 const productController = require("./Controllers/productController");
 const Product = require("./models/Product");
 const router = express.Router();
+// const uploadData = multer();
+const app = express();
 
 app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+// app.use(uploadData.array());
 
 //Multer config
 const storage = multer.diskStorage({
@@ -23,7 +25,7 @@ const upload = multer({ storage: storage });
 
 router.post(
   "/productos",
-  upload.single("archivo"),
+  upload.single("thumbnail"),
   productController.uploadProduct
 );
 
@@ -41,7 +43,11 @@ router.get("/productos/:id", validateId, productController.getProductById);
 
 router.delete("/productos/:id", productController.deleteById);
 
-router.put("/productos/:id", productController.updateById);
+router.put(
+  "/productos/:id",
+  upload.single("thumbnail"),
+  productController.updateById
+);
 
 app.use("/api", router);
 

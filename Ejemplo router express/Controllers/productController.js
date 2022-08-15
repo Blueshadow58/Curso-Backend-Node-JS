@@ -34,9 +34,12 @@ exports.deleteById = (req, res, next) => {
 
 exports.updateById = (req, res, next) => {
   const id = req.params.id;
-  const title = req.query.title;
-  const price = req.query.price;
-  const thumbnail = req.query.thumbnail;
+  const { title, price } = req.body;
+  const { file } = req;
 
-  res.send(Product.updateById(id, title, price, thumbnail));
+  if (!Product.getProductById(id)) {
+    res.send("no existe");
+  } else {
+    res.send(Product.updateById(id, title, price, file));
+  }
 };
