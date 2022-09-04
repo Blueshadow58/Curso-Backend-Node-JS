@@ -1,0 +1,13 @@
+{{>loveChamps}}
+
+<h1>Datos personales</h1>
+
+{{#if listExist}}
+
+<ul>
+    {{#each champList}}
+    <li>{{this.nombre}}</li>
+    {{/each}}
+    
+</ul>
+{{/if}}
